@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NICE COOKING - Your Expert Culinary Assistant</title>
+    <meta name="description"
+        content="NICE COOKING: Discover recipes, learn cooking techniques, and get personalized meal suggestions based on your ingredients.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <div class="logo-icon"><i class="fa-solid fa-fire-burner"></i></div>
+                <h1 class="logo-text">NICE<span>COOKING</span></h1>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active"><i class="fa-solid fa-message"></i> Assistant</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-book-open"></i> Browse Recipes</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-kitchen-set"></i> Techniques</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-heart"></i> Favorites</a>
+            </nav>
+
+            <div class="featured-recipe">
+                <div class="featured-img"></div>
+                <div class="featured-info">
+                    <span class="badge">Recipe of the Day</span>
+                    <h3>Classic Tiramisu</h3>
+                    <p>Learn the authentic Italian way</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="greeting">
+                    <h2>Good evening, Chef! 👨‍🍳</h2>
+                    <p>What are we cooking today?</p>
+                </div>
+                <div class="user-profile">
+                    <button class="icon-btn"><i class="fa-regular fa-bell"></i></button>
+                    <div class="avatar"></div>
+                </div>
+            </header>
+
+            <div class="chat-container">
+                <div class="chat-messages" id="chat-messages">
+                    <!-- Initial Welcome Message -->
+                    <div class="message bot-message">
+                        <div class="message-avatar"><i class="fa-solid fa-robot"></i></div>
+                        <div class="message-content">
+                            <p>Welcome to <strong>NICE COOKING</strong>! I'm your expert culinary assistant. I can help
+                                you with:</p>
+                            <ul>
+                                <li>Suggesting recipes based on ingredients you have (e.g., "I have rice and eggs")</li>
+                                <li>Step-by-step instructions for any dish</li>
+                                <li>Ingredient substitutions & cooking techniques</li>
+                                <li>Healthy meals and special diet recipes</li>
+                            </ul>
+                            <p>What would you like to make today?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-input-area">
+                    <div class="input-wrapper">
+                        <button class="attach-btn"><i class="fa-solid fa-camera"></i></button>
+                        <input type="text" id="user-input"
+                            placeholder="Type ingredients (e.g., 'chicken, garlic, cream') or ask for a recipe..."
+                            autocomplete="off">
+                        <button class="send-btn" id="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                    <div class="suggestion-chips">
+                        <span class="chip" onclick="setInput('How do I make pancakes?')">How do I make pancakes?</span>
+                        <span class="chip" onclick="setInput('I have rice and eggs')">I have rice and eggs</span>
+                        <span class="chip" onclick="setInput('Healthy vegan dinner ideas')">Healthy vegan dinner
+                            ideas</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
